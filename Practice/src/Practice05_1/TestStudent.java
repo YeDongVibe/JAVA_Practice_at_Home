@@ -55,7 +55,7 @@ public class TestStudent {
 		Student.showNumberObjects();//생성 후 객체수를 출력
 
 		for (int i = 0; i < 5; i++) {
-			arry[i].showStudent();// 생성된 객체 모두를 출력한다.
+			arry[i].showStudent();// 생성된 객체 모두를 출력
 		}
 	}
 

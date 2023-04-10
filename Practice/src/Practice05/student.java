@@ -55,7 +55,7 @@ public class student {
 			showNumberObjects(); //생성 후 객체수를 출력
 			
 			for (int i = 0; i < 5; i++) { //5개의 성분 출력
-				arry[i].showStudent();
+				arry[i].showStudent(); //생성된 객체 출력
 			}
 
 			}
