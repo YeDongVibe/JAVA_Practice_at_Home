@@ -42,7 +42,7 @@ class Salesman extends Employee {
 	}
 
 	public void calcBonus() {
-		System.out.println("Salesman " + getName() + "보너스 = "+ ( getSalary() * 12 * 4));
+		System.out.println("Salesman " + getName() + ": 보너스 = "+ (getSalary() * 12 * 4));
 	}
 }
 
@@ -54,15 +54,15 @@ class Consultant extends Employee {
 		this.consult = consult;
 	}
 	public void calcSalary() {
-		System.out.println("Consultant" + getName()+ "급여 = " +getSalary() + consult);
+		System.out.println("Consultant" + getName()+ ": 급여 = " +getSalary() + consult);
 	}
 
 	public void calcBonus() {
-		System.out.println("Consultant" + getName()+ "보너스 = " + (getSalary() * 12 * 2));
+		System.out.println("Consultant" + getName()+ " : 보너스 = " + (getSalary() * 12 * 2));
 	}
 }
                                                                                              
-abstract class Manager extends Employee {
+class Manager extends Employee {
 	int ps;
 	
 	public Manager(String name, int salary, int ps) {
@@ -71,7 +71,13 @@ abstract class Manager extends Employee {
 	}
 	
 	public void calcSalary() {
-		System.out.println("Manager"+ getName() + "급여 = "+ (getSalary() + ps));
+		System.out.println("Manager"+ getName() + ": 급여 = "+ (getSalary() + ps));
+	}
+
+	public void calcBonus() {
+		System.out.println("Manager" + getName()+ ": 보너스 = " + (getSalary() * 12 * 2));
+		// TODO Auto-generated method stub
+		
 	}
 
 }
@@ -82,7 +88,10 @@ public class HRSTest {
 		Consultant c = new Consultant("강용식", 400, 500);
 		Manager m = new Manager("이두팔",500, 600);
 		s.calcSalary();
+		s.calcBonus();
 		c.calcSalary();
+		c.calcBonus();
 		m.calcSalary();
+		m.calcBonus();
 	}
 }
